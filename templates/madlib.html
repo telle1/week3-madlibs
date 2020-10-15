@@ -1,0 +1,18 @@
+{% extends "basemadlib.html" %}
+
+{% block content %}
+
+    <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
+When {{ person }} went to pick it up, it burst into flames in a totally
+{{ adjective }} way. 
+
+{% if adjective2|length == 1 %}
+    This was {{adjective2[0]}}!
+{% elif adjective2|length == 2 %}
+    This was {{adjective2[0]}} and {{adjective2[1]}}!
+{% else %}
+    This was {{ adjective2[0] }}, {{adjective2[1]}}, and 
+    {{adjective2[2]}}!</p>
+{% endif %}
+
+{% endblock %}

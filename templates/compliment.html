@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <title>A Compliment</title>
+</head>
+<body>
+    Hi {{ person }}! I think you are
+    
+    {% if compliments|length == 1 %}
+
+      {{compliments[0]}}!
+    {% elif compliments|length == 2 %}
+      {{compliments[0]}} and {{compliments[1]}}!
+    {% else %}
+      {{compliments[0]}}, {{compliments[1]}}, and 
+    {{compliments[2]}}!</p>
+    
+    {% endif %}
+
+    <br>
+  
+    <form action="/game">
+      Would you like to play a game?
+    <input type="radio" name= "play" value = "yes">
+    <label for="yes">Yes</label>
+    <input type="radio" name = "play" value = "no">
+    <label for="no">No</label>
+    <button type ="submit">Submit</button>
+    </form>
+</body>
+</html>
